@@ -10,7 +10,11 @@ export default function App() {
     <View style={styles.container}>
       <Text style={styles.text}>리액트 네이티브</Text>
       <Text style={{...styles.text, color: "pink"}}>리액트 네이티브</Text>
-      <StatusBar style="auto" />
+      <StatusBar 
+          backgroundColor="#61dafb"
+          barStyle="dark-content"
+          // hidden={true} 
+      />
     </View>
   );
 }
@@ -20,10 +24,10 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#dee354',
+    // backgroundColor: '#dee354',
 
-    borderWidth: 20,
-    borderColor: 'hotpink',
+    // borderWidth: 20,
+    // borderColor: 'hotpink',
 
   },
   text: {
