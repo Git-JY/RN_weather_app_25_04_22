@@ -8,13 +8,12 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>리액트 네이티브</Text>
-      <Text style={{...styles.text, color: "pink"}}>리액트 네이티브</Text>
-      <StatusBar 
-          backgroundColor="#61dafb"
-          barStyle="dark-content"
-          // hidden={true} 
-      />
+      <Text style={styles.text}>결과: {number}</Text>
+      <View style={styles.btnGroup}>
+        <Button style={styles.btn} title='증가' onPress={() => {setNumber(number + 1)}}/>
+        <Button style={styles.btn} title='감소' onPress={() => {setNumber(number - 1)}}/>
+      </View>
+      <StatusBar style='auto'/>
     </View>
   );
 }
@@ -37,5 +36,9 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     padding: 10,
     borderRadius: 10
+  },
+  btnGroup: {
+    flexDirection: "row",
+    gap: 10,
   }
 });
