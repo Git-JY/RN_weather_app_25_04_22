@@ -4,41 +4,18 @@ import React, {useState} from 'react';
 
 export default function App() {
 
-  const [number, setNumber] = useState(0);
-
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>결과: {number}</Text>
-      <View style={styles.btnGroup}>
-        <Button style={styles.btn} title='증가' onPress={() => {setNumber(number + 1)}}/>
-        <Button style={styles.btn} title='감소' onPress={() => {setNumber(number - 1)}}/>
-      </View>
+    <View style={{borderWidth: 2}}>
+      <View style={{height:120, backgroundColor: 'red'}}></View>
+      <View style={{height:100, backgroundColor: 'darkorange'}}></View>
+      <View style={{height:10, backgroundColor: 'green'}}></View>
       <StatusBar style='auto'/>
     </View>
+
+    
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    // backgroundColor: '#dee354',
 
-    // borderWidth: 20,
-    // borderColor: 'hotpink',
-
-  },
-  text: {
-    backgroundColor: 'hotpink',
-    color: 'white',
-    fontSize: 45,
-    fontWeight: 'bold',
-    padding: 10,
-    borderRadius: 10
-  },
-  btnGroup: {
-    flexDirection: "row",
-    gap: 10,
-  }
 });
